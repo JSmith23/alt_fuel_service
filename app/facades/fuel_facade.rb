@@ -1,6 +1,5 @@
 class FuelFacade
-
-  def user_repos
+  def service_stations
     service_list[0...10]
   end
 

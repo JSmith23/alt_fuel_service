@@ -4,4 +4,5 @@ class FuelModel
     @address = attributes[:street_address]
     @fuel = attributes[:fuel_type_code]
     @access_time = attributes[:open_date]
+  end 
 end

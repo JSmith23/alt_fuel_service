@@ -8,7 +8,7 @@ class FuelService
 
 
   private
-  
+
   def get_json(path)
     response = conn.get(path)
     JSON.parse(response.body, symbolize_names: true)

@@ -1,7 +1,7 @@
 <h1>Nearest Stations</h1>
 
 <ul>
-  <% @stations.each do |station| %>
+  <% @stations.service_stations.each do |station| %>
     <li><%= station.name %></li>
     <li><%= station.address %></li>
     <li><%= station.fuel %></li>
