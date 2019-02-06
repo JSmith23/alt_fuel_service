@@ -1,10 +1,14 @@
 class FuelService
-  def initialize(token)
-    @token = token
+
+  def stations
+    get_json("/api/alt-fuel-stations/v1/nearest.format?parameters").each do |json_data|
+      FuelModel.new(json_data)
+    end
   end
 
-  
 
+  private
+  
   def get_json(path)
     response = conn.get(path)
     JSON.parse(response.body, symbolize_names: true)
@@ -15,4 +19,6 @@ class FuelService
       fd.params["api_key"] = ENV['FUEL_STATION_KEY']
       fd.adapter Faraday.default_adapter
     end
+  end
+
 end
