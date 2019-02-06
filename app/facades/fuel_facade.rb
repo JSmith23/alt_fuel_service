@@ -1,12 +1,12 @@
 class FuelFacade
   def service_stations
-    service_list[0...10]
+    service_list
   end
 
   private
 
   def service_list
-     service.stations
+    service.stations
   end
 
   def service
